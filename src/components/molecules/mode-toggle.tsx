@@ -9,7 +9,7 @@ import {
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuTrigger,
-} from "@/components/molecules/dropdown-menu";
+} from "@/components/molecules/DropdownMenu/dropdown-menu";
 
 export function ModeToggle() {
 	const { setTheme } = useTheme();

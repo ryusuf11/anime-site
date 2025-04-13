@@ -6,7 +6,7 @@
 		"dev": "next dev --turbopack --port=3000",
 		"build": "next build",
 		"start": "next start",
-		"test": "biome check && jest --verbose",
+		"test": "biome check && jest",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",
 		"lint": "biome check .",

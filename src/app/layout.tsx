@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type React from "react";
 import "./globals.css";
-import { ThemeProvider } from "@/components/atoms/theme-provider";
+import { ThemeProvider } from "@/components/atoms/ThemeProvider/theme-provider";
 import Footer from "@/components/organisms/footer";
 import Header from "@/components/organisms/header";
 import { Suspense } from "react";
