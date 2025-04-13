@@ -15,7 +15,9 @@ import {
 import dynamic from "next/dynamic";
 
 const SearchInput = dynamic(() =>
-	import("../molecules/search-input").then((mod) => mod.SearchInput),
+	import("../molecules/SearchInput/search-input").then(
+		(mod) => mod.SearchInput,
+	),
 );
 
 export default function Header() {

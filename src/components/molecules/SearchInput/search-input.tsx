@@ -42,6 +42,7 @@ export function SearchInput({ defaultSearch }: { defaultSearch?: string }) {
 			{(defaultSearch || query) && (
 				<button
 					type="button"
+					data-testid="clear-button"
 					onClick={handleClear}
 					className="absolute right-12 text-muted-foreground hover:text-foreground transition"
 				>
