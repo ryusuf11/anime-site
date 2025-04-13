@@ -6,7 +6,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { useMemo } from "react";
 
 import { Button } from "@/components/atoms/Button/Button";
-import { ModeToggle } from "@/components/molecules/mode-toggle";
+import { ModeToggle } from "@/components/molecules/ModeToggle/mode-toggle";
 import {
 	Sheet,
 	SheetContent,
