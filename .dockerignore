@@ -1,4 +1,7 @@
 node_modules
+.git
+tests
 .next
-pnpm-lock.yaml
 Dockerfile
+.dockerignore
+*.md
