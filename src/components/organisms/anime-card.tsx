@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Badge } from "@/components/atoms/Badge/Badge";
-import { Card, CardContent } from "@/components/molecules/card";
+import { Card, CardContent } from "@/components/molecules/Card/card";
 import type { Anime } from "@/modules/anime/anime.types";
 
 interface AnimeCardProps {

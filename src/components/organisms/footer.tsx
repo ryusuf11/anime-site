@@ -18,7 +18,7 @@ export default function Footer() {
 					</div>
 
 					<div>
-						<h3 className="mb-3 text-sm font-medium">Explore</h3>
+						<h3 className="mb-3 text-sm font-medium">Discover</h3>
 						<ul className="space-y-2 text-sm">
 							<li>
 								<Link
@@ -26,30 +26,6 @@ export default function Footer() {
 									className="text-muted-foreground hover:text-foreground"
 								>
 									Explore
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="/search?category=Action"
-									className="text-muted-foreground hover:text-foreground"
-								>
-									Action
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="/search?category=Comedy"
-									className="text-muted-foreground hover:text-foreground"
-								>
-									Comedy
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="/search?category=Drama"
-									className="text-muted-foreground hover:text-foreground"
-								>
-									Drama
 								</Link>
 							</li>
 						</ul>

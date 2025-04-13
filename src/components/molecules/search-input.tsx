@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/atoms/Button/Button";
-import { Input } from "@/components/atoms/input";
+import { Input } from "@/components/atoms/Input";
 import { useDebounce } from "@/hooks/useDebounce";
 import { Search, X } from "lucide-react";
 import { useRouter } from "next/navigation";
