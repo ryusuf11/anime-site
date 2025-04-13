@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+	images: {
+		domains: ["img.youtube.com", "cdn.myanimelist.net"],
+		minimumCacheTTL: 2678400,
+	},
+	/* config options here */
 };
 
 export default nextConfig;
