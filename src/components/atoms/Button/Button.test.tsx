@@ -1,9 +1,6 @@
-import { cn } from "@/lib/utils";
-// Button.test.tsx
 import { fireEvent, render, screen } from "@testing-library/react";
-import { Button } from "./Button"; // Adjust the import path as necessary
+import { Button } from "./Button";
 
-// Mock the `cn` utility to avoid complexity
 jest.mock("@/lib/utils", () => ({
 	cn: jest.fn((...args) => args.join(" ")),
 }));
