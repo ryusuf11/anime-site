@@ -16,3 +16,16 @@ class MockPointerEvent extends Event {
 
 // biome-ignore lint/suspicious/noExplicitAny: <explanation>
 window.PointerEvent = MockPointerEvent as any;
+
+global.matchMedia =
+	global.matchMedia ||
+	(() => ({
+		matches: false,
+		addListener: jest.fn(),
+		removeListener: jest.fn(),
+	}));
+
+jest.mock("next-themes", () => ({
+	...jest.requireActual("next-themes"),
+	useTheme: jest.fn().mockReturnValue({ theme: "light", setTheme: jest.fn() }),
+}));
