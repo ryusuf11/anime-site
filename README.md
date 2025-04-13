@@ -1,7 +1,6 @@
-````md
 # 🧬 Anime Site
 
-A modern, high-performance anime website built with [Next.js 15](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Radix UI](https://www.radix-ui.com/), and [Framer Motion](https://www.framer.com/motion/). Includes a sleek component system, animated UI, and comprehensive testing setup.
+A modern anime discovery platform built with **Next.js 15**, **Tailwind CSS**, **Radix UI**, and organized using the **Atomic Design** methodology.
 
 ---
 
@@ -10,30 +9,33 @@ A modern, high-performance anime website built with [Next.js 15](https://nextjs.
 - **Framework**: [Next.js 15 (App Router)](https://nextjs.org/docs)
 - **Styling**: Tailwind CSS v4 + tailwindcss-animate + tw-animate-css
 - **UI Components**: Radix UI primitives
-- **Icons**: lucide-react
 - **Animations**: Framer Motion
 - **Theming**: next-themes
-- **State Management**: (Add here if using Redux/Zustand/etc.)
 - **Testing**: Jest, React Testing Library, jest-dom
-- **Formatter & Linter**: [Biome](https://biomejs.dev/)
+- **Linter & Formatter**: Biome
 - **Package Manager**: [pnpm](https://pnpm.io/)
+- **Architecture**: [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
 
 ---
 
 ## 📦 Installation
 
-> This project uses [`pnpm`](https://pnpm.io) — make sure it's installed globally:
+> This project uses [`pnpm`](https://pnpm.io)
 
 ```bash
 npm install -g pnpm
-```
-````
-
-Then, install dependencies:
-
-```bash
 pnpm install
 ```
+
+### 📄 Create `.env` File
+
+Create a `.env` file at the root of the project with the following content:
+
+```env
+NEXT_PUBLIC_API_URL=https://api.jikan.moe/v4
+```
+
+This variable is used to configure the public API base URL for Jikan (MyAnimeList API).
 
 ---
 
@@ -41,86 +43,114 @@ pnpm install
 
 | Script               | Description                              |
 | -------------------- | ---------------------------------------- |
-| `pnpm dev`           | Start local dev server with Turbopack    |
+| `pnpm dev`           | Start development server with Turbopack  |
 | `pnpm build`         | Build the app for production             |
-| `pnpm start`         | Start the production server              |
-| `pnpm test`          | Run linter + test suite                  |
-| `pnpm test:watch`    | Watch mode for Jest                      |
-| `pnpm test:coverage` | Run tests with coverage report           |
-| `pnpm lint`          | Lint the code using Biome                |
+| `pnpm start`         | Start production server                  |
+| `pnpm test`          | Lint and run test suite                  |
+| `pnpm test:watch`    | Run tests in watch mode                  |
+| `pnpm test:coverage` | Generate test coverage report            |
+| `pnpm lint`          | Lint the project using Biome             |
 | `pnpm format`        | Format code using Biome                  |
-| `pnpm format:check`  | Check formatting without writing changes |
+| `pnpm format:check`  | Check formatting without modifying files |
+
+---
+
+## 🧩 Folder Structure (Atomic Design)
+
+```bash
+src/
+├── components/
+│   ├── atoms/
+│   │   ├── Avatar/
+│   │   ├── Badge/
+│   │   ├── Button/
+│   │   ├── Input/
+│   │   ├── ScrollArea/
+│   │   ├── Select/
+│   │   ├── Separator/
+│   │   ├── Skeleton/
+│   │   └── ThemeProvider/
+│   ├── molecules/
+│   │   ├── Card/
+│   │   ├── DropdownMenu/
+│   │   ├── ModeToggle/
+│   │   ├── SearchInput/
+│   │   ├── Sheet/
+│   │   └── Tabs/
+│   └── organisms/
+│       ├── AnimeCard/
+│       ├── AnimeSlider/
+│       ├── Footer/
+│       ├── Header/
+│       ├── Pagination/
+│       ├── RecommendationSection/
+│       └── ReviewSection/
+```
+
+### 🧱 Atoms
+
+> Reusable, minimal components like buttons, inputs, avatars, skeletons.
+
+### 🧬 Molecules
+
+> Group of atoms forming UI patterns like cards, dropdowns, toggles.
+
+### 🧪 Organisms
+
+> Complex components composed of multiple molecules (e.g., AnimeSlider, Header).
 
 ---
 
 ## 🧪 Testing
 
-We use [Jest](https://jestjs.io/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) with `jest-dom` matchers.
+We use [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/):
 
 ```bash
 pnpm test
 ```
 
----
+### File Naming Convention
 
-## 🧩 Library Overview
-
-### Radix UI
-
-We use multiple accessible components from Radix, such as:
-
-- `@radix-ui/react-tabs`
-- `@radix-ui/react-dialog`
-- `@radix-ui/react-select`
-- `@radix-ui/react-dropdown-menu`
-- `@radix-ui/react-scroll-area`
-
-These primitives are wrapped in custom UI components that use `data-slot` attributes and utility classes via `clsx` and `cn`.
-
-### Framer Motion
-
-Used for entrance/exit animations and microinteractions. Integrated in components like sliders and transitions.
-
-### TailwindCSS
-
-Enhanced with:
-
-- `tailwindcss-animate`: Keyframe animation support
-- `tw-animate-css`: Utility classes for smooth CSS animations
-- `tailwind-merge`: Avoids conflicting Tailwind classes
+- Each component has its test colocated:
+  ```
+  component-name/
+    component-name.tsx
+    component-name.test.tsx
+  ```
 
 ---
 
-## 📁 Folder Structure
+## 📘 Usage
+
+To create a new component (e.g., molecule):
 
 ```bash
-src/
-  components/    # UI components (tabs, sheet, etc.)
-  app/           # Next.js App Router structure
-  lib/           # Utility functions (e.g., cn.ts)
-  styles/        # Tailwind + global styles
-  tests/         # Testing utilities
+src/components/molecules/YourComponent/
+├── your-component.tsx
+├── your-component.test.tsx
+└── index.ts
+```
+
+### Example Usage
+
+```tsx
+// src/app/page.tsx
+import { Tabs } from "@/components/molecules/Tabs";
+
+<Tabs defaultValue="tab1">
+  <Tabs.List>
+    <Tabs.Trigger value="tab1">Tab 1</Tabs.Trigger>
+    <Tabs.Trigger value="tab2">Tab 2</Tabs.Trigger>
+  </Tabs.List>
+  <Tabs.Content value="tab1">Content 1</Tabs.Content>
+  <Tabs.Content value="tab2">Content 2</Tabs.Content>
+</Tabs>;
 ```
 
 ---
 
-## 🤝 Contributing
+## 🧰 Utilities
 
-1. Fork this repository
-2. Create a new branch
-3. Make your changes and test them
-4. Submit a pull request
+- `@/lib/utils`: Utility helpers (e.g., `cn` className combiner)
 
 ---
-
-## 📝 License
-
-MIT
-
----
-
-> Built by Ryan Yusuf
-
-```
-
-```
