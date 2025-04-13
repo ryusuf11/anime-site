@@ -1,5 +1,5 @@
-import { Skeleton } from "@/components/atoms/Skeleton/skeleton";
-import { Card, CardContent } from "@/components/molecules/Card/card";
+import { Skeleton } from "@/components/atoms/Skeleton";
+import { Card, CardContent } from "@/components/molecules/Card";
 
 export default function AnimeCardSkeleton() {
 	return (

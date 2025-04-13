@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Button } from "@/components/atoms/Button/Button";
+import { Button } from "@/components/atoms/Button";
 import AnimeCard from "@/components/organisms/anime-card";
 import { actionGetHomeData } from "@/containers/home/home.action";
 import dynamic from "next/dynamic";

@@ -1,9 +1,5 @@
-import { Skeleton } from "@/components/atoms/Skeleton/skeleton";
-import {
-	Card,
-	CardContent,
-	CardHeader,
-} from "@/components/molecules/Card/card";
+import { Skeleton } from "@/components/atoms/Skeleton";
+import { Card, CardContent, CardHeader } from "@/components/molecules/Card";
 
 export default function ReviewSectionSkeleton() {
 	return (

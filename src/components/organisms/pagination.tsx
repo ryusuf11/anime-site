@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Button } from "../atoms/Button/Button";
+import { Button } from "../atoms/Button";
 
 interface PaginationProps {
 	currentPage: number;

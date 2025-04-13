@@ -1,13 +1,13 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/atoms/Avatar";
-import { Badge } from "@/components/atoms/Badge/Badge";
-import { Separator } from "@/components/atoms/Separator/separator";
-import { ScrollArea } from "@/components/atoms/scroll-area/scroll-area";
+import { Badge } from "@/components/atoms/Badge";
+import { Separator } from "@/components/atoms/Separator";
+import { ScrollArea } from "@/components/atoms/scroll-area";
 import {
 	Card,
 	CardContent,
 	CardHeader,
 	CardTitle,
-} from "@/components/molecules/Card/card";
+} from "@/components/molecules/Card";
 import { actionGetAnimeReview } from "@/containers/detail/detail.action";
 import { Star, ThumbsUp } from "lucide-react";
 import Link from "next/link";

@@ -6,8 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import { Badge } from "@/components/atoms/Badge/Badge";
-import { Button } from "@/components/atoms/Button/Button";
+import { Badge } from "@/components/atoms/Badge";
+import { Button } from "@/components/atoms/Button";
 import type { Anime } from "@/modules/anime/anime.types";
 
 interface AnimeSliderProps {

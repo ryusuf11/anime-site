@@ -1,15 +1,15 @@
 import { CalendarIcon, Clock, Star } from "lucide-react";
 import Image from "next/image";
 
-import { Badge } from "@/components/atoms/Badge/Badge";
-import { Button } from "@/components/atoms/Button/Button";
-import { Separator } from "@/components/atoms/Separator/separator";
+import { Badge } from "@/components/atoms/Badge";
+import { Button } from "@/components/atoms/Button";
+import { Separator } from "@/components/atoms/Separator";
 import {
 	Tabs,
 	TabsContent,
 	TabsList,
 	TabsTrigger,
-} from "@/components/molecules/tabs";
+} from "@/components/molecules/Tabs";
 import RecommendationSectionSkeleton from "@/components/organisms/recommendation-section-skeleton";
 import ReviewSectionSkeleton from "@/components/organisms/review-section-skeleton";
 import dynamic from "next/dynamic";
