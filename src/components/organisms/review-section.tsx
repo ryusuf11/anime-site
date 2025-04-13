@@ -1,7 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/atoms/Avatar";
 import { Badge } from "@/components/atoms/Badge/Badge";
+import { Separator } from "@/components/atoms/Separator/separator";
 import { ScrollArea } from "@/components/atoms/scroll-area/scroll-area";
-import { Separator } from "@/components/atoms/separator";
 import {
 	Card,
 	CardContent,

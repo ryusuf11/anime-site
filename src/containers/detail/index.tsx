@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { Badge } from "@/components/atoms/Badge/Badge";
 import { Button } from "@/components/atoms/Button/Button";
-import { Separator } from "@/components/atoms/separator";
+import { Separator } from "@/components/atoms/Separator/separator";
 import {
 	Tabs,
 	TabsContent,
