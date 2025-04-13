@@ -1,4 +1,4 @@
-import { Skeleton } from "@/components/atoms/skeleton";
+import { Skeleton } from "@/components/atoms/Skeleton/skeleton";
 
 export default function RecommendationSectionSkeleton() {
 	return (
